@@ -32,6 +32,7 @@
 </head>
 
 <body>
+
        <script type="text/javascript" language="javascript">
  
     //加入收藏
@@ -87,8 +88,7 @@
       <!-- start: Header Menu -->
       <div class="btn-group pull-right" > <a class="btn" href="shortcut.php"> <i class="icon-warning-sign"></i><span class="hidden-phone hidden-tablet"> 桌面快捷方式</span> </a> <a class="btn" onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)"> <i class="icon-tasks"></i><span class="hidden-phone hidden-tablet")" title="AdMaster内部导航站"> 加入收藏</span> </a> 
         <!-- start: User Dropdown --> 
-        <a class="btn"  onclick="SetHome(window.location)" href="javascript:void(0)"> <i class="icon-user"></i><span class="hidden-phone hidden-tablet"> 设置默认首页</span>
-        
+        <a class="btn"  onclick="SetHome(window.location)" href="javascript:void(0)"> <i class="icon-user"></i><span class="hidden-phone hidden-tablet"> 设置默认首页</span> 
         <!--<span class="caret"></span>--> 
         </a> 
         <!--<ul class="dropdown-menu">
@@ -139,130 +139,15 @@
       <div>
         <ul class="breadcrumb">
           <li> <a href="index.html">Home</a> <span class="divider">/</span> </li>
-          <li> 其他站点 </li>
+          <li>留言</li>
         </ul>
       </div>
-      
-      <div class="row-fluid">
-        <div class="sortable row-fluid">
-          <div class="box-small span2"> <a data-rel="tooltip" title="新浪微博，不用解释" class="box-small-link" href="http://www.weibo.com/" target="_blank">
-          <div><img src="img/weibofavicon.ico" style="height:16px" alt="SiteMaster">&nbsp;新浪微博</div>
-          </a>
-          <div class="box-small-title">微博</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="腾讯微博，不用解释" class="box-small-link" href="http://t.qq.com/" target="_blank">
-          <div><img src="img/tqqfavicon.ico" style="height:16px" alt="SurveyMaster">&nbsp;腾讯微博</div>
-          </a>
-          <div class="box-small-title">微博</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="原来的小资集中地，现在逐步被屌丝攻克" class="box-small-link" href="http://www.douban.com/" target="_blank">
-          <div><img src="img/doubanfavicon.ico" style="height:16px" alt="豆瓣">&nbsp;豆瓣</div>
-          </a>
-          <div class="box-small-title">社区</div>
-        </div>
-          <div class="box-small span2"> <a data-rel="tooltip" title="苍天啊，难道我已经老了吗？我都不上人人了，^_^" class="box-small-link" href="http://www.renren.com/" target="_blank">
-            <div>人人网</div>
-            </a>
-            <div class="box-small-title">社区</div><span class="notification">RenRen</span>
-          </div>
-          <div class="box-small span2"> <a data-rel="tooltip" title="自由的百科：五毛、带路党和轮子的战场" class="box-small-link" href="http://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5" target="_blank">
-            <div><img src="img/wikipediafavicon.ico" style="height:16px" alt="维基百科">&nbsp;维基百科</div>
-            </a>
-            <div class="box-small-title">百科全书</div>
-          </div>
-        </div>
-        <div class="sortable row-fluid">
-          <div class="box-small span2"> <a data-rel="tooltip" title="UCD大社区 - 以用户为中心的设计" class="box-small-link" href="http://ucdchina.com/" target="_blank">
-            <div>用户体验设计</div>
-            </a>
-            <div class="box-small-title">产品学习</div>
-            <span class="notification">UCDChina</span> </div>
-          <div class="box-small span2"> <a data-rel="tooltip" title="广告门：一个行业的跌宕起伏 - 抄自该网站，网站中多是广告行业的新闻" class="box-small-link" href="http://www.adquan.com/" target="_blank">
-            <div><img src="img/adquanfavicon.ico" style="height:16px" alt="广告门">&nbsp;广告门</div>
-            </a>
-            <div class="box-small-title">行业资讯</div>
-          </div>
-          <div class="box-small span2"> <a data-rel="tooltip" title="公司的PLMM灰常多，这个专门奉上，男童鞋也要学习，知己知彼百战不殆~;-)" class="box-small-link" href="http://www.rayli.com.cn/" target="_blank">
-            <div><img src="img/raylifavicon.ico" style="height:16px" alt="瑞丽女性">&nbsp;瑞丽女性</div>
-            </a>
-            <div class="box-small-title">女性</div>
-          </div>
-          <div class="box-small span2"> <a data-rel="tooltip" title="酷狗的在线音乐" class="box-small-link" href="http://web.kugou.com/default.html" target="_blank">
-            <div><img src="img/kugoufavicon.ico" style="height:16px" alt="ChinaZ PPT素材下载">&nbsp;在线听歌</div>
-            </a>
-            <div class="box-small-title">酷狗音乐</div>
-          </div>
-          <div class="box-small span2"> <a data-rel="tooltip" title="百度音乐盒没啥好介绍的了，-__-" class="box-small-link" href="http://music.baidu.com/box?__o=/search#loaded" target="_blank">
-            <div><img src="img/baidufavicon.ico" style="height:16px" alt="iciba">&nbsp;百度音乐盒</div>
-            </a>
-            <div class="box-small-title">百度音乐</div>
-          </div>
-          
-        </div>
-      </div>
-      <div class="sortable row-fluid">
-        <div class="box-small span2"> <a data-rel="tooltip" title="爱奇艺影视" class="box-small-link" href="http://www.iqiyi.com/" target="_blank">
-          <div><img src="img/iqiyifavicon.ico" style="height:16px" alt="爱奇艺">&nbsp;爱奇艺</div>
-          </a>
-          <div class="box-small-title">奇艺影视</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="电影、电视剧比较全，页面速度一般，播放速度快" class="box-small-link" href="http://www.eoeoo.com/" target="_blank">
-          <div><img src="img/eoeoofavicon.ico" style="height:16px" alt="易看电影">&nbsp;在线影视</div>
-          </a>
-          <div class="box-small-title">快播影音</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="国内外优秀公开课程" class="box-small-link" href="http://open.163.com/" target="_blank">
-          <div><img src="img/163favicon.ico" style="height:16px" alt="SiteMaster">&nbsp;网易公开课</div>
-          </a>
-          <div class="box-small-title">学习</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="各种比赛直播" class="box-small-link" href="http://www.zhibo8.cc/" target="_blank">
-          <div><img src="img/zhibo8favicon.ico" style="height:16px" alt="SurveyMaster">&nbsp;直播吧</div>
-          </a>
-          <div class="box-small-title">赛事直播</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="犯贱志-一个有内涵的网站" class="box-small-link" href="http://www.fanjian.net/" target="_blank">
-          <div><img src="img/fanjianfavicon.ico" style="height:16px" alt="犯贱志">&nbsp;犯贱志</div>
-          </a>
-          <div class="box-small-title">搞笑娱乐</div>
-        </div>
-      </div>
-      <div class="sortable row-fluid">
-        <div class="box-small span2"> <a data-rel="tooltip" title="嘛也不说了，天猫的质量好一点" class="box-small-link" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGGjlY60oHcc7bkKOQtOoVocDMufQq6qACUN7Skzuv3%2F4IDKj5jy4%2BX7Ym%2BsYBUkyIEp4MWICCHZDTcJX5tA%2FELLTLn2mg%3D%3D" target="_blank">
-          <div> <img src="img/tmallfavicon.ico" alt="天猫" style="height:16px">&nbsp;淘宝天猫</div>
-          </a>
-          <div class="box-small-title">购物</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="也没啥说的" class="box-small-link" href="http://r.59miao.com/?e=117220&s=1052" target="_blank">
-          <div><img src="img/360buyfavicon.ico" style="height:16px" alt="京东">&nbsp;京东</div>
-          </a>
-          <div class="box-small-title">购物</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="团购大全" class="box-small-link" href="http://www.tuan800.com/" target="_blank">
-          <div><img src="img/tuan800favicon.ico" alt="团购" style="height:16px">&nbsp;团购</div>
-          </a>
-          <div class="box-small-title">购物/团购</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="购物返利网站，还在和卖家讲价就弱爆了（滥用一下职权(*^__^*) ）" class="box-small-link" href="http://www.uoouo.com/" target="_blank">
-          <div><img src="img/uoouofavicon.ico" style="height:16px" alt="返利网站"> &nbsp;返利</div>
-          </a>
-          <div class="box-small-title">购物/返利</div>
-        </div>
-        <div class="box-small span2"> <a data-rel="tooltip" title="比价购物" class="box-small-link" href="http://www.etao.com/" target="_blank">
-          <div><img src="img/etaofavicon.ico" style="height:16px" alt="一淘">&nbsp;比价</div>
-          </a>
-          <div class="box-small-title">购物/比价</div>
-        </div>
-      </div>
+      <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1529735" async=""></script>
+<!-- UY END -->
     </div>
-    
-    
-    
-    <div class="row-fluid"> 
-      
-
-      
-    </div>
+    <div class="row-fluid"> </div>
     
     <!-- end: Content --> 
   </div>
@@ -315,8 +200,6 @@
 <script src="js/jquery.masonry.min.js"></script> 
 <script src="js/custom.js"></script> 
 <script type="text/javascript" language="JavaScript">
-
-/* 消息一、二、三 注释掉了
 	
 	function message_welcome1(){
 		var unique_id = $.gritter.add({
@@ -331,11 +214,11 @@
 			// (int | optional) the time you want it to be alive for before fading out
 			time: '',
 			// (string | optional) the class name you want to apply to that specific message
-			class_name: 'my-sticky-class'
+			class_name: 'gritter-light'
 		});
 	}
 	
-	
+	/* 消息二、三 注释掉了
 	
 	function message_welcome2(){
 		var unique_id = $.gritter.add({
@@ -386,7 +269,7 @@
 		
 	});			
 	</script> 
-<!-- end: JavaScript-->
+<!-- end: JavaScript--> 
 
 <script type="text/javascript">
   var _smq = _smq || [];
@@ -401,7 +284,5 @@
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
   })();
 </script>
-
-
 </body>
 </html>

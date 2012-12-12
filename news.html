@@ -32,15 +32,62 @@
 </head>
 
 <body>
+       <script type="text/javascript" language="javascript">
+ 
+    //加入收藏
+ 
+        function AddFavorite(sURL, sTitle) {
+ 
+            sURL = encodeURI(sURL); 
+        try{   
+ 
+            window.external.addFavorite(sURL, sTitle);   
+ 
+        }catch(e) {   
+ 
+            try{   
+ 
+                window.sidebar.addPanel(sTitle, sURL, "");   
+ 
+            }catch (e) {   
+ 
+                alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+ 
+            }   
+ 
+        }
+ 
+    }
+ 
+    //设为首页
+ 
+    function SetHome(url){
+ 
+        if (document.all) {
+ 
+            document.body.style.behavior='url(#default#homepage)';
+ 
+               document.body.setHomePage(url);
+ 
+        }else{
+ 
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+ 
+        }
+ 
+    }
+ 
+</script>
+
 <!-- start: Header -->
 <div class="navbar">
   <div class="navbar-inner">
-    <div class="container-fluid"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.html" style="font-family:'微软雅黑'"> <img alt="AdMaster" src="http://www.admaster.com.cn/static/img/logo.png" style="height:22px" /> <span> 内部导航站</span></a> 
-								
-			   <!-- start: Header Menu -->
-      <div class="btn-group pull-right" > <a class="btn" href="#"> <i class="icon-warning-sign"></i><span class="hidden-phone hidden-tablet"> 桌面快捷方式</span> </a> <a class="btn" href="#"> <i class="icon-tasks"></i><span class="hidden-phone hidden-tablet"> 加入收藏</span> </a> 
+    <div class="container-fluid"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.html" style="font-family:'微软雅黑'"> <img alt="AdMaster" src="/img/logo.png" style="height:22px" /> <span> 内部导航站</span></a> 
+      
+      <!-- start: Header Menu -->
+      <div class="btn-group pull-right" > <a class="btn" href="shortcut.php"> <i class="icon-warning-sign"></i><span class="hidden-phone hidden-tablet"> 桌面快捷方式</span> </a> <a class="btn" onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)"> <i class="icon-tasks"></i><span class="hidden-phone hidden-tablet")" title="AdMaster内部导航站"> 加入收藏</span> </a> 
         <!-- start: User Dropdown --> 
-        <a class="btn"  href="#"> <i class="icon-user"></i><span class="hidden-phone hidden-tablet"> 设置默认首页</span> 
+        <a class="btn"  onclick="SetHome(window.location)" href="javascript:void(0)"> <i class="icon-user"></i><span class="hidden-phone hidden-tablet"> 设置默认首页</span>
         <!--<span class="caret"></span>--> 
         </a> 
         <!--<ul class="dropdown-menu">
@@ -71,6 +118,7 @@
       <li><a href="tools.html"><i class="icon-edit"></i><span class="hidden-tablet"> 实用工具</span></a></li>
       <li><a href="others.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> 其他站点</span></a></li>
       <li><a href="news.html"><i class="icon-font"></i><span class="hidden-tablet"> 消息通知</span></a></li>
+      <li><a href="message.html"><i class="icon-font"></i><span class="hidden-tablet"> 留言</span></a></li>
     </ul>
 				</div><!--/.well -->
 			</div><!--/span-->
@@ -100,44 +148,60 @@
 			<div class="row-fluid sortable">
 				<div class="box span9">
 					<div class="box-header">
-						<h2><i class="icon-font"></i><span class="break"></span>Typography</h2>
+						<h2><i class="icon-font"></i><span class="break"></span>消息</h2>
 					</div>
 					<div class="box-content">
 						  <div class="page-header">
-							  <h1>Typography <small>Headings, paragraphs, lists, and other inline type elements</small></h1>
+							  <h1>AdMaster 内部导航站 <small>发布啦~~</small></h1>
 						  </div>     
 						  <div class="row-fluid">            
-							  <div class="span4">
-								<h3>Sample text and paragraphs</h3>
+							  <div class="span6">
+								<h3>这是第一个版本</h3>
 								<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. Nulla tellus elit, varius non commodo eget, mattis vel eros. In sed ornare nulla. Donec consectetur, velit a pharetra ultricies, diam lorem lacinia risus, ac commodo orci erat eu massa. Sed sit amet nulla ipsum. Donec felis mauris, vulputate sed tempor at, aliquam a ligula. Pellentesque non pulvinar nisi.
+								水平太次，html玩不转，折腾这好久才搞出来希望大家能够多多提些意见！
 								</p>
 								<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. Nulla tellus elit, varius non commodo eget, mattis vel eros. In sed ornare nulla. Donec consectetur, velit a pharetra ultricies, diam lorem lacinia risus, ac commodo orci erat eu massa. Sed sit amet nulla ipsum. Donec felis mauris, vulputate sed tempor at, aliquam a ligula. Pellentesque non pulvinar nisi.
-								</p>
+								也许开始你用着不是那么好用，希望大家可以给一些支持，在大家的支持下，这个导航肯定可以为大家带来各种便捷！</p>
+								<p>希望大家积极参与提建议，大家认为哪些网站是特别常用的，请给我来QQ、<a href="mailto:liguanghui@admaster.com.cn" target="_blank"><strong>发邮件</strong></a>、或者直接<a href="message.html"><strong>留言</strong></a></p>
 							  </div>
-							  <div class="span4">
-								<h3>Example body text</h3>
-								<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-								<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.</p>
-							  </div>
-							  <div class="span4 ">
-								<div class="well">
-								  <h1>h1. Heading 1</h1>
-								  <h2>h2. Heading 2</h2>
-								  <h3>h3. Heading 3</h3>
-								  <h4>h4. Heading 4</h4>
-								  <h5>h5. Heading 5</h5>
-								  <h6>h6. Heading 6</h6>
-								</div>
+							  <div class="span6">
+								<h3>2013年元旦、春节的放假通知</h3>
+								<p>根据国家相关规定，结合公司实际运营情况，2013年元旦、春节放假安排如下： <br>
+								  元旦： 2013年01月01日至01月03日放假调休，共3天； 01月05日（星期六）、01月06日（星期日）正常上班；<br>
+								  春节： 2013年02月09日至2013年02月15日放假调休，共7天； 02月16日（星期六）、02月17日（星期日）正常上班。 <br>
+							    提前预祝AdMaster全体员工及家人新年快乐，身体健康，阖家幸福！</p>
 							  </div>
 						  </div><!--/row -->                           
 						
-						  <div class="row-fluid">
+                        <div class="row-fluid">
+							  <div class="span12">
+								<h2>北京公司举办2013年会的通知！</h2>
+								<p>作别2012，喜迎2013, 值此欢乐跨年之际，“AdMaster2012年终总结大会&AdMaster2013新年酒会之北京夜”确定于：</p>
+								<p><strong>2013年1月12日至1月13日</strong>在<strong><a href="http://poi.mapbar.com/beijing/MAPIQVXEXRJRJBSBLWC" title="星光影视园" target="_blank">北京•大兴•星光影视园</a></strong>举办！:</p>
+								<div class="tooltip-demo well">
+								  <p class="muted" style="margin-bottom: 0;"><h2>AdMaster2013新年酒会之北京夜【节目＆比赛】征集</h2></p>
+								  <p class="muted">“AdMaster2013新年酒会之北京夜”活动已正式拉开大幕！在此欢聚的时刻，让我们一起狂欢吧！<br>
+现面向AdMaster北京所有同学征集晚会节目及篮球羽毛球比赛队员！凡是报名或者推荐的同学均将获得神秘礼品哦！比赛获胜的同学或者队伍，每人还将获得终极神秘大奖哟~~~<br>
+一、晚会节目征集<br>
+节目形式（不限，形式新颖或者原创作品优先。） <br>
+二、篮球、羽毛球参赛征集<br>
+报名须知： <br>
+①羽毛球以个人为参赛单位报名，根据报名人数组织预选赛，并角逐决赛队员<br>
+②篮球以队为参赛单位报名，男篮、女篮各2队进行角逐。由参赛队长报名，注明本队成员。<br>
+征集项目：<br>
+1、羽毛球：男单、女单、混双。（数量不限） <br>
+2、篮球：男篮、女篮。<br>
+3、裁判：羽毛球裁判3名、篮球裁判2名<br>
+4、拉拉队：姑凉们，这是属于你们的队伍，还等什么，赶紧来报名,为你心目中的明星加油助威吧！</div>                                  
+						  </div>
+					  </div>
+                        
+						  <!--<div class="row-fluid">
 							  <div class="span12">
 								  <h3>Example blockquotes</h3>
 								  <div class="row-fluid">
-									<div class="span6">
+
+<div class="span6">
 									  <p>Default blockquotes are styled as such:</p>
 									  <blockquote>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
@@ -153,8 +217,8 @@
 									</div>
 								  </div>
 							  </div>
-						  </div>
-						  <div class="row-fluid">
+						  </div>-->
+						  <!--<div class="row-fluid">
 								<div class="span6">
 								<h3>More Sample Text</h3>
 								<p>
@@ -167,31 +231,25 @@
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. Nulla tellus elit, varius non commodo eget, mattis vel eros. In sed ornare nulla. Donec consectetur, velit a pharetra ultricies, diam lorem lacinia risus, ac commodo orci erat eu massa. Sed sit amet nulla ipsum. Donec felis mauris, vulputate sed tempor at, aliquam a ligula. Pellentesque non pulvinar nisi.
 								</p>
 							  </div>
-						  </div>
-						  <div class="row-fluid">
-							  <div class="span12">
-								<h2>Example use of Tooltips</h2>
-								<p>Hover over the links below to see tooltips:</p>
-								<div class="tooltip-demo well">
-								  <p class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" data-rel="tooltip" data-original-title="first tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american appadata-rel <a href="#" data-rel="tooltip" data-original-title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A <a href="#" data-rel="tooltip" data-original-title="Another one here too">really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin <a href="#" data-rel="tooltip" data-original-title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
-								  </p>
-								</div>                                  
-							  </div>
-						  </div>	 
+						  </div>-->
+						  	 
 					  </div>
 				</div><!--/span-->
 				
 				<div class="box span3">
 					<div class="box-header" data-original-title>
-						<h2><i class="icon-list"></i><span class="break"></span>Unordered List</h2>
+						<h2><i class="icon-list"></i><span class="break"></span>通知列表</h2>
 					</div>
 					<div class="box-content">
 						<ul>
-						  <li>Lorem ipsum dolor sit amet</li>
-						  <li>Consectetur adipiscing elit</li>
-						  <li>Integer molestie lorem at massa</li>
-						  <li>Facilisis in pretium nisl aliquet</li>
-						  <li>Nulla volutpat aliquam velit
+						  <li>AdMaster内部导航上线</li>
+						  <br>
+						  <li>2013年元旦、春节放假通知</li>
+                          <br>
+						  <li>北京公司举办2013年会的通知</li>
+						  <br>
+                          <li>AdMaster2013新年酒会之北京夜【节目＆比赛】征集</li>
+<!--						  <li>Nulla volutpat aliquam velit
 							<ul>
 							  <li>Phasellus iaculis neque</li>
 							  <li>Purus sodales ultricies</li>
@@ -202,11 +260,11 @@
 						  <li>Faucibus porta lacus fringilla vel</li>
 						  <li>Aenean sit amet erat nunc</li>
 						  <li>Eget porttitor lorem</li>
-						</ul>            
+-->						</ul>            
 					</div>
 				</div><!--/span-->
 				
-				<div class="box span3">
+				<!--<div class="box span3">
 					<div class="box-header" data-original-title>
 						<h2><i class="icon-list"></i><span class="break"></span>Ordered List</h2>
 					</div>
@@ -222,9 +280,9 @@
 						  <li>Eget porttitor lorem</li>
 						</ol>           
 					</div>
-				</div><!--/span-->
+				</div>--><!--/span-->
 				
-				<div class="box span3">
+				<!--<div class="box span3">
 					<div class="box-header well" data-original-title>
 						<h2><i class="icon-list"></i><span class="break"></span>Description List</h2>
 					</div>
@@ -239,7 +297,7 @@
 						  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
 						</dl>            
 					</div>
-				</div><!--/span-->
+				</div>--><!--/span-->
 				
 				
 			
